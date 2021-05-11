@@ -7,7 +7,7 @@
 
 # for number in myNumbers:
 #     if number == 2:
-#         continue
+#         continue # Stop the current iteration (skip), and continue the loop.
     # print(number)
 
 #------------------------------------------------------------------------------------------------------------------#
@@ -17,7 +17,7 @@
 
 # for number in myNumbers:
 #     if number == 4:
-#         break
+#         break # Stop the Loop.
 #     print(number)
     
 #------------------------------------------------------------------------------------------------------------------#
@@ -27,5 +27,5 @@
 
 # for number in myNumbers:
 #     if number == 4:
-#         pass # Ignore the loop without Removing/Comminting it out
+#         pass # Ignore the loop without Removing/Comminting it out.
 #     print(number)

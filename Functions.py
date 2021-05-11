@@ -107,35 +107,70 @@
 #-----------------Function Scope----------------#
 #################################################
 
-x = 0 # Global Scope
+# x = 0 # Global Scope
 
-def one():
-    global x
-    print(f"Print Variable Explicitly From Global Scope within the Function {x}")
+# def one():
+#     global x
+#     print(f"Print Variable Explicitly From Global Scope within the Function {x}")
     
-    x = 1 # Function Scope
-    print(f"Print Variable From Function One Scope {x}")
+#     x = 1 # Function Scope
+#     print(f"Print Variable From Function One Scope {x}")
 
-def two():
-    x = 2 # Function Scope
-    print(f"Print Variable From Function Two Scope {x}")
+# def two():
+#     x = 2 # Function Scope
+#     print(f"Print Variable From Function Two Scope {x}")
 
-def three():
-    #x = 2 # Function Scope
-    print(f"Function Three has no defined \"x\" variable, it will use the GLobal Scope value {x}")
+# def three():
+#     #x = 2 # Function Scope
+#     print(f"Function Three has no defined \"x\" variable, it will use the GLobal Scope value {x}")
 
 
-print(f"Print Variable From Global Scope {x}")
-one()
-two()
-three()
+# print(f"Print Variable From Global Scope {x}")
+# one()
+# two()
+# three()
 
 #$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$#
 #$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$#
 #$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$#
 
 #################################################
-#-----------------Function Scope----------------#
+#---------------Function Recursion--------------#
 #################################################
 
+# Test Word [ WWWoooorrrldd ] # print(x[1:])
 
+# def cleanWord(word):
+#     if len(word) == 1:
+#         return word
+    
+#     if word[0] == word[1]:
+#         return cleanWord(word[1:]) # "Woooorrrldd" after two times
+#     return word
+
+# print(cleanWord("WWWoooorrrldd"))
+
+#$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$#
+#$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$#
+#$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$#
+
+#################################################
+#----------------Function Lambda----------------#
+#---------------Anonymous Function--------------#
+#################################################
+# [1] It has no name
+# [2] You can call it without defining it
+# [3] Lambda is used for simple funtions, but Def handles large and complex tasks
+# [4] Lambda is one Expression Function, not block of code
+# [5] Lambda type is Function
+#-------------------------------------------------------------------------------------#
+
+def say_hello(name, age): return f"Hello {name}. Your age is: {age}"
+
+hello = lambda name, age: f"Hello {name}. Your age is: {age}"
+
+print(say_hello("Ahmed", 36))
+print(hello("Ahmed", 36))
+
+print(say_hello.__name__)
+print(hello.__name__)
